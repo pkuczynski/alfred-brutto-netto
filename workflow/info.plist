@@ -69,6 +69,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>2F160FB6-087E-473C-AEBE-9BADA819AC9B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>argumenttype</key>
@@ -96,7 +113,7 @@
 				<key>subtext</key>
 				<string>Opcjonalnie podaj stawkę VAT jako drugi parametr</string>
 				<key>title</key>
-				<string>Kwota brutto z kwoty netto</string>
+				<string>Kwota netto z kwoty brutto</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -110,27 +127,31 @@
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>2F160FB6-087E-473C-AEBE-9BADA819AC9B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
 			<string>5A83421F-B3CB-4FC6-808B-6BF9CF9C14F3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Kwota {var:value_uid} została skopiowana do schowka</string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>BAF04129-5978-4C6B-A9E7-6C6C939FE514</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -164,7 +185,7 @@
 				<key>subtext</key>
 				<string>Opcjonalnie podaj stawkę VAT jako drugi parametr</string>
 				<key>title</key>
-				<string>Kwota netto z kwoty brutto</string>
+				<string>Kwota brutto z kwoty netto</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -176,27 +197,6 @@
 			<string>0A3C749F-1494-453A-9D1A-3850BE4DD029</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>Kwota {var:value_uid} została skopiowana do schowka</string>
-				<key>title</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>BAF04129-5978-4C6B-A9E7-6C6C939FE514</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>

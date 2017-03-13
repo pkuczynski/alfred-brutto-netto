@@ -5,8 +5,8 @@ class Workflow
     @params = query.split(' ')
     @subject = @params[0]
 
-    net if @subject == 'brutto'
-    gross if @subject == 'netto'
+    net if @subject == 'netto'
+    gross if @subject == 'brutto'
     vat
   end
 
@@ -18,6 +18,9 @@ class Workflow
     item 'brutto', '%.2f' % @gross
     item 'vat', '%.2f' % @vat_amount, "VAT (#{@vat}%)"
     item 'netto', '%.2f' % @net
+    item 'kosztu/dochodu', '%.2f' % @revenue, 'Rzeczywisty koszt/dochód'
+    item 'podatku', '%.2f' % @income_tax, 'Podatek dochodowy (19%)'
+    item 'suma podatków', '%.2f' % @sum_of_taxes
 
     @items
   end
@@ -66,6 +69,9 @@ class Workflow
     @net = @gross * 100/(100 + @vat) unless @net
     @vat_amount = @net * @vat/100 unless @vat_amount
     @gross = @net + @vat_amount unless @gross
+    @income_tax = @net * 0.19
+    @revenue = @net - @income_tax
+    @sum_of_taxes = @vat_amount + @income_tax
   end
 
 end
