@@ -18,8 +18,8 @@ class Workflow
     item 'brutto', '%.2f' % @gross
     item 'vat', '%.2f' % @vat_amount, "VAT (#{@vat}%)"
     item 'netto', '%.2f' % @net
-    item 'kosztu/dochodu', '%.2f' % @revenue, 'Rzeczywisty koszt/dochód'
     item 'podatku', '%.2f' % @income_tax, 'Podatek dochodowy (19%)'
+    item 'kosztu/dochodu', '%.2f' % @revenue, 'Rzeczywisty koszt/dochód'
     item 'suma podatków', '%.2f' % @sum_of_taxes
 
     @items
@@ -53,7 +53,6 @@ class Workflow
 
   def item uid, value, subtitle=nil
     @items << {
-        uid: uid,
         title: value,
         subtitle: subtitle ? subtitle : uid.capitalize,
         arg: JSON[{alfredworkflow: {
