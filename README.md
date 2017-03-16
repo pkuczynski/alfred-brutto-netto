@@ -17,7 +17,7 @@ netto {KWOTA_NETTO} {STAWKA_VAT}
 
 ## Instalacja
 
-Pobierz i uruchom plik [BruttoNetto](BruttoNetto.alfredworkflow)
+Pobierz i zainstaluj pakiet z serwisu [Packal](http://www.packal.org/workflow/brutto-netto), który zapewnia automatyczne aktualizacje lub pobierz paczkę bezpośrednio z [GitHub](BruttoNetto.alfredworkflow).
 
 ## License
 
