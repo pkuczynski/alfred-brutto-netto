@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.hypode.bruttonetto</string>
+	<key>category</key>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>0A3C749F-1494-453A-9D1A-3850BE4DD029</key>
@@ -240,6 +242,6 @@
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string>https://github.com/pkuczynski</string>
+	<string>https://github.com/pkuczynski/alfred-brutto-netto</string>
 </dict>
 </plist>
